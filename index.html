@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Valle Calchaquí · Identidad &amp; Enoturismo</title>
+<style>
+:root{--bg:#F6EEDC;--card:#FFF9EC;--ink:#3A1220;--mut:#7a5a4a;--wine:#4F1824;--ocre:#D9A441;--terra:#C0643A;--cardon:#6F8232;--line:#e6d6b4;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1d0c12;--card:#2a121b;--ink:#f6eedc;--mut:#d3b9a4;--wine:#e9c9a0;--line:#4a2430}}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Georgia,'Times New Roman',serif;line-height:1.5}
+header{background:#4F1824;color:#F6EEDC;text-align:center;padding:28px 18px 22px;border-bottom:6px solid var(--ocre)}
+header svg{width:92px;height:92px}
+h1{font-family:Impact,'Arial Narrow',sans-serif;letter-spacing:2px;font-weight:400;font-size:2.1rem;margin:8px 0 2px;text-transform:uppercase}
+header p{margin:2px 0;color:#D9A441}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;display:flex;gap:6px;overflow-x:auto;padding:10px;background:var(--bg);border-bottom:1px solid var(--line)}
+nav button{flex:0 0 auto;border:1px solid var(--line);background:var(--card);color:var(--ink);padding:8px 13px;border-radius:20px;font:inherit;font-size:.9rem;cursor:pointer}
+nav button.on{background:var(--terra);color:#fff;border-color:var(--terra)}
+main{max-width:760px;margin:0 auto;padding:16px}
+section{display:none}section.on{display:block;animation:f .35s}
+@keyframes f{from{opacity:0;transform:translateY(8px)}to{opacity:1}}
+h2{color:var(--wine);margin:6px 0 4px}
+.sub{color:var(--mut);margin-top:0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:12px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin:10px 0}
+.stat{text-align:center}.stat b{display:block;font-size:1.3rem;color:var(--terra);overflow-wrap:anywhere}.card.tap{text-align:center}
+.tap{cursor:pointer;width:100%;text-align:left;font:inherit;color:inherit;display:block}.tap:not(.card){background:none;border:0;padding:0}.chk{display:block;margin:6px 0}.chk input{margin-right:8px}
+.tap h3{margin:0;color:var(--wine);display:flex;justify-content:space-between}
+.tap h3:after{content:"＋";color:var(--terra)}.tap.open h3:after{content:"－"}
+.more{display:none;margin-top:8px}.tap.open+.more,.tap.open .more{display:block}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1px solid var(--terra);background:transparent;color:var(--ink);padding:7px 12px;border-radius:18px;font:inherit;cursor:pointer}
+.chip.on{background:var(--terra);color:#fff}
+#locinfo{min-height:48px}
+.tl{border-left:3px solid var(--ocre);margin:12px 0 12px 8px;padding-left:14px}
+.tl div{margin-bottom:12px}.tl b{color:var(--terra)}
+.tabs2{display:flex;gap:8px}.tabs2 button{flex:1}
+.aroma{font-size:2rem}
+.opt{display:block;width:100%;text-align:left;margin:7px 0;padding:11px;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:10px;font:inherit;cursor:pointer}
+.opt.ok{background:#6F8232;color:#fff}.opt.no{background:#a23b2c;color:#fff}
+.bar{height:8px;background:var(--line);border-radius:8px;overflow:hidden}.bar i{display:block;height:100%;background:var(--terra);width:0;transition:.4s}
+.seal{text-align:center;border:3px dashed var(--terra);border-radius:50%;width:170px;height:170px;margin:18px auto;display:flex;flex-direction:column;justify-content:center;color:var(--wine);transform:rotate(-8deg);animation:p .6s}
+@keyframes p{from{transform:scale(.3) rotate(-30deg)}}
+.btn{background:var(--wine);color:#F6EEDC;border:0;padding:10px 18px;border-radius:10px;font:inherit;cursor:pointer}
+footer{text-align:center;padding:22px 16px 30px;color:var(--mut);font-size:.9rem}
+</style>
+</head>
+<body>
+<header>
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="46" fill="none" stroke="#D9A441" stroke-width="3"/><circle cx="35" cy="26" r="7" fill="#C0643A"/><path d="M8 60 L30 36 L48 52 L60 40 L92 62 A44 44 0 0 1 8 60Z" fill="#D9A441"/><path d="M10 66 L40 52 Q60 70 50 90 A44 44 0 0 1 10 66Z" fill="#C0643A"/><rect x="66" y="22" width="9" height="52" rx="4" fill="#6F8232"/><rect x="58" y="38" width="6" height="20" rx="3" fill="#6F8232"/><rect x="77" y="32" width="6" height="22" rx="3" fill="#6F8232"/></svg>
+<h1>Valle Calchaquí</h1>
+<p>Donde la altura se transforma en vino</p>
+<p style="font-size:.8rem;color:#F6EEDC">Identidad &amp; Enoturismo · Grupo 10 · Taller de Enoturismo 2026</p>
+</header>
+<nav id="nav"></nav>
+<main>
+
+<section id="s0" class="on">
+<h2>Identidad territorial</h2>
+<p class="sub">Noroeste argentino: sectores de Salta, Tucumán y Catamarca.</p>
+<div class="grid">
+<div class="card stat"><b>1.500–3.000</b>msnm, altitud frecuente de los viñedos</div>
+<div class="card stat"><b>Árido</b>clima seco, baja humedad, días soleados</div>
+<div class="card stat"><b>Temperaturas</b>con gran amplitud térmica entre el día y la noche</div>
+</div>
+<h3>Tocá una localidad</h3>
+<div class="chips" id="locs"></div>
+<div class="card" id="locinfo">Elegí un pueblo para conocer su rol en el valle.</div>
+<h3>El territorio y el vino</h3>
+<div class="card"><button class="tap"><h3>Clima</h3></button><div class="more">Escasas lluvias, concentradas en verano; abundante sol y baja humedad. La amplitud térmica favorece una maduración equilibrada de las uvas y ayuda a conservar su acidez. Como llueve poco, los viñedos necesitan riego.</div></div>
+<div class="card"><button class="tap"><h3>Relieve y suelos</h3></button><div class="more">Valles intermontanos, quebradas, sierras y montañas. Los suelos suelen ser arenosos, pedregosos y de origen aluvial, con buen drenaje y poca materia orgánica. Altura, clima y suelo aportan identidad a los vinos.</div></div>
+<div class="card"><button class="tap"><h3>Paisaje característico</h3></button><div class="more">Viñedos de altura entre montañas · quebradas de rocas multicolores · pueblos de adobe y arquitectura colonial · cardones y jarillas adaptados a la aridez · artesanías, gastronomía y fiestas tradicionales.</div></div>
+<h3>Variedades de uva</h3>
+<div id="uvas"></div>
+</section>
+
+<section id="s1">
+<h2>Patrimonio que cuenta historias</h2>
+<p class="sub">Abrí cada tarjeta: un relato de 1 minuto.</p>
+<div id="pat"></div>
+</section>
+
+<section id="s2">
+<h2>Entre viñedos y montañas</h2>
+<p class="sub">2 días y 1 noche · jóvenes y adultos · Cafayate y Santa María · grupos de 10 a 15 personas</p>
+<div class="card">Objetivo: conocer la identidad vitivinícola y cultural del Valle Calchaquí a través de experiencias educativas, recreativas y sensoriales.</div>
+<div class="tabs2"><button class="chip on" data-d="0">Día 1 · Cafayate</button><button class="chip" data-d="1">Día 2 · Santa María</button></div>
+<div class="tl" id="tl"></div>
+<div class="card"><b>Servicios incluidos</b><br>🚌 Transporte turístico · 🛏️ 1 noche en Cafayate con desayuno · 🧭 Guía · 🎟️ Museo, bodegas y taller artesanal · 🍽️ Dos almuerzos regionales y desayuno (bebidas sin alcohol) · 🗺️ Folleto, mapa y materiales sensoriales</div>
+<div class="card"><b>¿Cómo se conectan las actividades?</b><br>Territorio y paisaje → Historia y vitivinicultura → Patrimonio y tradiciones → Gastronomía y sentidos → <b>Experiencia enoturística integral</b>.</div>
+<h3>Recomendaciones: qué llevar al visitar el Valle Calchaquí</h3>
+<p class="sub">Marcá lo que ya tenés en tu mochila.</p>
+<div class="card">
+<label class="chk"><input type="checkbox">🧴 <b>Protector solar y labial con filtro:</b> sol intenso y altura.</label>
+<label class="chk"><input type="checkbox">🧢 <b>Sombrero o gorra y anteojos de sol.</b></label>
+<label class="chk"><input type="checkbox">🧥 <b>Ropa en capas y un abrigo:</b> la amplitud térmica hace que el día sea cálido y la noche fresca.</label>
+<label class="chk"><input type="checkbox">👟 <b>Calzado cómodo:</b> para caminar por viñedos, bodegas, museos y pueblos.</label>
+<label class="chk"><input type="checkbox">💧 <b>Botella de agua:</b> clima seco y baja humedad; hidratate seguido.</label>
+<label class="chk"><input type="checkbox">🧴 <b>Crema hidratante:</b> el aire seco reseca la piel.</label>
+<label class="chk"><input type="checkbox">🪪 <b>Documento y algo de efectivo:</b> útil en puestos artesanales y comercios chicos.</label>
+<label class="chk"><input type="checkbox">📷 <b>Cámara o celular con carga:</b> los paisajes y las bodegas piden muchas fotos.</label>
+<label class="chk"><input type="checkbox">🎒 <b>Mochila liviana</b> y ganas de probar sabores y tradiciones locales.</label>
+<p class="sub" style="margin-bottom:0">Si hay degustaciones, disfrutalas con moderación: en altura el alcohol se siente más.</p>
+</div>
+</section>
+
+<section id="s5">
+<h2>Desafío del visitante</h2>
+<p class="sub">5 preguntas · 2 minutos · ¡conseguí tu sello!</p>
+<div class="bar"><i id="pb"></i></div>
+<div class="card" id="quiz"></div>
+</section>
+
+</main>
+<footer>🍇 19 regiones. Un mismo viaje. Un recorrido construido entre todos.<br>Valle Calchaquí: donde la altura se transforma en vino.</footer>
+
+<script>
+const $=s=>document.querySelector(s),E=(t,c,h)=>{const e=document.createElement(t);if(c)e.className=c;if(h)e.innerHTML=h;return e};
+const tabs=['Territorio','Patrimonio','Experiencia','Desafío'];
+tabs.forEach((t,i)=>{const b=E('button',i?'':'on',t);b.onclick=()=>{document.querySelectorAll('section').forEach((s,j)=>s.classList.toggle('on',j==i));document.querySelectorAll('nav button').forEach((x,j)=>x.classList.toggle('on',j==i));scrollTo({top:0,behavior:'smooth'})};$('#nav').append(b)});
+document.addEventListener('click',e=>{const t=e.target.closest('.tap');if(t)t.classList.toggle('open');if(t&&t.nextElementSibling&&!t.querySelector('.more'))0});
+document.querySelectorAll('.card>.tap').forEach(t=>t.addEventListener('click',()=>{}));
+const locs={Cafayate:'<b>Salta</b> · A unos 1.700 msnm, es la puerta de entrada y el corazón vitivinícola del valle. Su variedad blanca más representativa es el Torrontés Riojano.<br>Reúne el Museo de la Vid y el Vino, bodegas históricas como El Esteco y Vasija Secreta, una plaza principal con puestos de artesanías y viñedos a pasos del pueblo.<br>Cerca están los paisajes de quebradas de rocas multicolores que caracterizan a la región.',Cachi:'<b>Salta</b> · Pueblo de calles empedradas, casas de adobe y arquitectura colonial, a más de 2.000 msnm, rodeado de montañas y cardones.<br>Su iglesia es famosa por usar madera de cardón en su construcción, y muy cerca se encuentra el Parque Nacional Los Cardones.<br>Es una parada ideal para disfrutar del paisaje, la tranquilidad y la cultura local, con actividad vitivinícola y turística.',Molinos:'<b>Salta</b> · Pueblo pequeño y tranquilo, a unos 2.000 msnm, con fuerte aire colonial y calles de adobe.<br>Se destaca su iglesia del siglo XVIII, dedicada a San Pedro Nolasco, y la antigua hacienda que hoy funciona como alojamiento.<br>Sus viñedos de altura lo vinculan con la vitivinicultura y el turismo cultural.','San Carlos':'<b>Salta</b> · Localidad a unos 1.700 msnm, ubicada a pocos kilómetros de Cafayate y considerada una de las más antiguas del valle.<br>Se destaca por su gran plaza, su iglesia, sus artesanías y sus viñedos.<br>Tiene tradición vitivinícola y es una parada habitual para quienes recorren el valle.','Santa María':'<b>Catamarca</b> · Se ubica en el Valle de Yokavil, dentro de los Valles Calchaquíes, con producción de vinos de altura.<br>Conserva una gran herencia de los pueblos originarios: allí se destacan el poncho santamariano, la cerámica y los tejidos en telar, y el Museo Arqueológico Eric Boman, con piezas de las culturas Santa María y Belén.<br>Es el segundo día de la experiencia: viñedos, artesanos y tradiciones.'};
+Object.keys(locs).forEach(k=>{const b=E('button','chip',k);b.onclick=()=>{document.querySelectorAll('#locs .chip').forEach(x=>x.classList.remove('on'));b.classList.add('on');$('#locinfo').innerHTML='<b>'+k+'</b><br>'+locs[k]};$('#locs').append(b)});
+[['🌸','Torrontés Riojano','Blanca. La más representativa de Cafayate. Aromas florales y frutales: rosas, cítricos y duraznos.'],['🍇','Malbec','Color violáceo intenso; aromas a ciruelas, moras y otras frutas. Taninos suaves y textura redonda.'],['🍷','Cabernet Sauvignon','Rojo profundo; grosellas negras, especias y notas herbales. Más estructura y taninos firmes que el Malbec.'],['🫐','Tannat','Color muy oscuro; frutas negras y especias. Alta concentración de taninos y estructura intensa.']].forEach(([i,n,d])=>{const c=E('div','card');c.innerHTML='<button class="tap"><h3><span>'+i+' '+n+'</span></h3></button><div class="more">'+d+'</div>';$('#uvas').append(c)});
+[['🏛️ Museo de la Vid y el Vino','Cafayate, Salta','Inaugurado el 11 de marzo de 2011 donde antes funcionaba La Bodega Encantada. Conserva y cuenta la historia de la vitivinicultura calchaquí: naturaleza, trabajo humano y vino. Usa recursos audiovisuales, sonidos e imágenes interactivas. Dos salas: <b>Memoria de la Vid</b> (suelo, agua, sol y clima) y <b>Memoria del Vino</b> (evolución histórica, técnicas y trabajo de las personas). Es patrimonio porque comunica los saberes que forman parte de la identidad regional.'],
+['🏺 Bodega Vasija Secreta','Cafayate, Salta','Antes Bodega La Banda, es una de las más antiguas de los Valles Calchaquíes. Nació cuando la producción se hacía en establecimientos familiares. Su arquitectura muestra la evolución de las bodegas: del adobe a instalaciones modernas. Es testimonio de las familias bodegueras y de la transformación de la actividad.'],
+['🏰 Bodega El Esteco','Cafayate, Salta','Sus orígenes se remontan a 1892, cuando los hermanos David y Salvador Michel comenzaron a desarrollar la vitivinicultura en Cafayate. Arquitectura colonial con galerías y patios, rodeada de viñedos de altura. Incorporó nuevas tecnologías sin perder la tradición. Permite recorrer sus instalaciones y entender cómo las condiciones naturales influyen en el vino.'],
+['🧶 Tradiciones artesanales','Santa María, Catamarca','En el Valle de Yokavil, herencia de los pueblos originarios. Se destacan el <b>poncho santamariano</b>, la cerámica y otros trabajos artesanales. Hilado, teñido y tejido en telar se transmiten de generación en generación: patrimonio inmaterial vivo. Visitar talleres valora el trabajo artesano y fortalece la economía local.'],
+['🗿 Museo Arqueológico Eric Boman','Santa María, Catamarca','Conserva cerámicas, herramientas de piedra, objetos de metal y cestería de las antiguas culturas de la región, en especial Santa María y Belén. Muestra la vida cotidiana, creencias y organización de las sociedades prehispánicas, y preserva la memoria del Valle de Yokavil.']
+].forEach(([t,w,d])=>{const c=E('div','card');c.innerHTML='<button class="tap"><h3><span>'+t+'<br><small style="font-weight:400;color:var(--mut)">'+w+'</small></span></h3></button><div class="more">'+d+'</div>';$('#pat').append(c)});
+const days=[[['09:00','Recepción en Cafayate','Guía y presentación del valle: clima árido, relieve y viñedos de altura. Fotos panorámicas.'],['10:00','Museo de la Vid y el Vino','Recorrido de una hora con recursos audiovisuales e interactivos.'],['11:30','Bodega tradicional','Viñedos, cosecha y elaboración; reconocimiento de uvas y taller de aromas frutales y florales.'],['13:30','Almuerzo regional','Empanadas salteñas, humitas o tamales.'],['15:30','Paseo cultural','Plaza principal y puestos artesanales; charla con productores.'],['18:00','Alojamiento y tiempo libre','Check-in en Cafayate.']],
+[['08:00','Desayuno y salida a Santa María','Traslado por el Valle de Yokavil con interpretación del paisaje.'],['09:30','Emprendimiento vitivinícola','Charla con productores y comparación con Cafayate.'],['11:30','Artesanos de Santa María','Demostración de técnicas de tejido.'],['13:00','Almuerzo catamarqueño','Maíz y especias; ingredientes y agricultura del territorio.'],['15:00','“Los aromas del Valle”','Frascos con especias, hierbas y frutas para identificar aromas.'],['16:00','Cierre','Compartir lo aprendido y crear una postal con foto y frase.']]];
+function tl(d){$('#tl').innerHTML=days[d].map(x=>'<div><b>'+x[0]+'</b> · <b style="color:var(--wine)">'+x[1]+'</b><br>'+x[2]+'</div>').join('');document.querySelectorAll('.tabs2 .chip').forEach((b,i)=>b.classList.toggle('on',i==d))}
+document.querySelectorAll('.tabs2 .chip').forEach(b=>b.onclick=()=>tl(+b.dataset.d));tl(0);
+const Q=[['¿Cuál es la variedad blanca más representativa de Cafayate?',['Chardonnay','Torrontés Riojano','Sauvignon Blanc'],1],['¿A qué altitud se ubican frecuentemente los viñedos?',['0–500 msnm','500–1.000 msnm','1.500–3.000 msnm'],2],['¿Qué favorece la gran amplitud térmica?',['Una maduración equilibrada y acidez','Más lluvias','Suelos húmedos'],0],['¿Cuándo se inauguró el Museo de la Vid y el Vino?',['11 de marzo de 2011','1 de enero de 1990','20 de julio de 2005'],0],['¿Qué tejido tradicional se destaca en Santa María?',['Manta pampa','Poncho santamariano','Chal andaluz'],1]];
+let qi=0,sc=0;
+function show(){const q=Q[qi];$('#pb').style.width=(qi/Q.length*100)+'%';const c=$('#quiz');c.innerHTML='<b>'+(qi+1)+'/'+Q.length+'</b> · '+q[0];q[1].forEach((o,i)=>{const b=E('button','opt',o);b.onclick=()=>{if(c.dataset.l)return;c.dataset.l=1;if(i==q[2]){sc++;b.classList.add('ok')}else{b.classList.add('no');c.children[q[2]+1]&&0;[...c.querySelectorAll('.opt')][q[2]].classList.add('ok')}setTimeout(()=>{delete c.dataset.l;qi++;qi<Q.length?show():end()},900)};c.append(b)})}
+function end(){$('#pb').style.width='100%';$('#quiz').innerHTML='<h3>Resultado: '+sc+'/'+Q.length+'</h3>'+(sc>=3?'<div class="seal"><b>SELLO</b>VALLE<br>CALCHAQUÍ<br>🌵🍇</div><p style="text-align:center">¡Mostrá esta pantalla en el stand para sellar tu pasaporte!</p>':'<p>Casi… repasá las pestañas y volvé a intentarlo.</p>')+'<button class="btn" id="rs">Reintentar</button>';$('#rs').onclick=()=>{qi=0;sc=0;show()}}
+show();
+</script>
+</body>
+</html>
